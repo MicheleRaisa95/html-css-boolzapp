@@ -1,0 +1,120 @@
+/*****************
+ * MOBILE FIRST  *
+*****************/
+
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*LAYOUT*/
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    height: 90%;
+    width: 80%;
+    margin: auto;
+ }
+ 
+ .row {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .messaggi {
+    width: 90%;
+     height: 300px;
+     border: 1px solid black;
+     background-color: blue;
+ }
+
+ .contatti {
+    display: none;
+    width: 10%;
+    height: 300px;
+    border: 1px solid black;
+    background-color: red;
+ }
+ 
+ .col {
+     width: 100%;
+     /*height: 300px;*/
+     border: 1px solid black;
+     background-color: var(--primary-color);
+ }
+
+ .mex {
+   /* height: 100px;*/
+    border: 1px solid black;
+}
+/*VARIABLES*/
+
+:root {
+
+    --primary-color: #eaeaea
+}
+
+img {
+    max-width: 100%;
+}
+
+/*UTILITIES*/
+
+.round {
+    border-radius: 30%;
+}
+
+.flex {
+    display: flex;
+}
+
+.min-height {
+    min-height: 1200px;
+}
+    
+/*CONTENT*/
+
+.avatar {
+    flex-shrink: 0;
+    margin-right: 2rem;
+}
+
+.avatar img {
+    width: 100px;
+  height: 100px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.mex-bg {
+    background-image: url(../img/mine.jpg);
+}
+
+.rounded-card {
+    width: 70%;
+}
+
+/*  MEDIA QUARY */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+        
+    
+    .col {
+        width: 90%;
+    }
+
+    .contatti {
+        width: 10%;
+    }
+}
+
