@@ -9,140 +9,177 @@
     box-sizing: border-box;
 }
 
-/*LAYOUT*/
+ul {
+    list-style-type: none;
+}
+
+
+
+/*COMMON*/
 
 body {
-    display: flex;
     height: 100vh;
+    display: flex;
 }
 
 .container {
-    max-width: 100%;
-    
- }
- 
- .row {
-     display: flex;
- }
-
- .messaggi {
-    flex-grow: 1;
-    background-color: aqua;
-     border: 1px solid black;
-     
- }
-
- .contatti {
+    display: flex;
+    background-color: lightblue;
+    width: 100%;
+}
+/*LAYOUT*/
+.sidebar {
     display: none;
+    background-color: chartreuse;
+}
+
+.content {
+    background-image: url(../img/mine.jpg);
+    flex-grow: 1;
+}
+
+header {
+    background-color: var(--color-gray);
+    height: 70px;
     flex-shrink: 0;
-    border: 1px solid black;
-    background-color: red;
- }
-
- 
- .col {
-     width: 100%;
-     /*height: 300px;*/
-     border: 1px solid black;
-     background-color: var(--primary-color);
- }
-
- .mex {
-   /* height: 100px;*/
-    border: 1px solid black;
-}
-/*VARIABLES*/
-
-:root {
-
-    --primary-color: #eaeaea;
-    --body-top-color: #009688;
-    --body-main-color: #d7dbd5;
-   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
 }
 
-img {
-    max-width: 100%;
+.conversation {
+    height: calc(100% - 140px);
+    overflow-y: auto;
 }
 
-/*UTILITIES*/
-
-.round {
-    border-radius: 30%;
+footer.message {
+    background-color: var(--message-bg);
+    height: 70px;
+    flex-shrink: 0;
 }
 
 .flex {
     display: flex;
 }
 
-.min-height {
-    min-height: 1200px;
+.align-items-center {
+    align-items: center;
 }
-    .display-none {
-        display: none;
-    }
+
+.icone-content {
+    display: none;
+ }
+
+
+/*STYLES*/
+
+:root {
+    --background-top: #009588;
+    --background-main: #d9dbd7;
+    --color-gray: #eaeaea;
+    --notification-bg: #8fdafc;
+    --search-bg: #fafafa;
+    --chat-bg: #ffffff;
+    --message-bg: #f3eeeb;
+    --icone-header: #b1b1b1;
+}
+
+header i {
+    padding: 8px;
+}
+
+.profile-name {
+    padding-left: 10px;
+}
 /*CONTENT*/
 
-.avatar {
-    flex-shrink: 0;
-    margin-right: 2rem;
+/*sidebar,header*/
+
+.profilo img {
+ width: 50px;  
+ height: 50px; 
+ border-radius: 50%;
 }
 
-.avatar img {
-    width: 100px;
-  height: 100px;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 50%;
-}
 
-.mex-bg {
-    background-image: url(../img/mine.jpg);
-}
 
-.rounded-card {
-    width: 70%;
-}
 
-/*  MEDIA QUARY */
+/* Media Queries */
+
 /*tablet*/
+
 @media screen and (min-width: 768px) {
-
-    .container {
-        display: flex;
+    body {
+        background-color: cadetblue;
     }
+
+    .container{
         
-    .contatti {
-        display: block;
     }
 
-   
-    
-    .excp {
-        display: inline-block;
-        width: 50%;
+    .sidebar{
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
     }
-    
+
+    .notification {
+       display: none;
+    }
+
+    .search {
+       display: none;
+    }
+
+    .chats {
+        background-color: var(--chat-bg);
+        overflow-y: auto;
+    }
+
+     .icone {
+        display: none;
+     }
+
+     .icone-content {
+        display: block;
+        color: var(--icone-header);
+     }
+
 }
+
+/*desktop*/
 
 @media screen and (min-width: 992px) {
-    
-   body {
-    background: linear-gradient(  #009688 0%,  #009688 40%, #d7dbd5 40% );
-    background-repeat: no-repeat;
-   }
+    body {
+        background: linear-gradient( 0deg, var(--background-main) 70%, var(--background-top) 30%)
+    } 
 
-   .container {
-    width: 80%;
-    height: 90%;
-    margin: auto;
-   }
+    .container {
+        width: 80%;
+        height: 90%;
+        margin: auto;
+    }
 
-   .contatti {
-    width: 350px;
-   }
+    .sidebar {
+        width: 350px;
+    }
 
-  
-   
+    .notification {
+        display: block;
+         background-color: var(--notification-bg);
+     }
+ 
+     .search {
+        display: block;
+         background-color: var(--search-bg);
+     }
+
+     .icone {
+        display: block;
+        color: var(--icone-header);
+     }
+
+     
 }
-
