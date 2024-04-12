@@ -17,9 +17,8 @@ body {
 }
 
 .container {
-    height: 90%;
-    width: 80%;
-    margin: auto;
+    max-width: 100%;
+    margin: 0 auto;
  }
  
  .row {
@@ -28,7 +27,7 @@ body {
  }
 
  .messaggi {
-    width: 90%;
+    width: 100%;
    /*  height: 300px;*/
      border: 1px solid black;
      
@@ -40,6 +39,7 @@ body {
     border: 1px solid black;
     background-color: red;
  }
+
  
  .col {
      width: 100%;
@@ -56,7 +56,10 @@ body {
 
 :root {
 
-    --primary-color: #eaeaea
+    --primary-color: #eaeaea;
+    --body-top-color: #009688;
+    --body-main-color: #d7dbd5;
+   
 }
 
 img {
@@ -76,7 +79,9 @@ img {
 .min-height {
     min-height: 1200px;
 }
-    
+    .display-none {
+        display: none;
+    }
 /*CONTENT*/
 
 .avatar {
@@ -103,18 +108,43 @@ img {
 /*  MEDIA QUARY */
 
 @media screen and (min-width: 768px) {
-    .container {
-        
-    }
         
     .contatti {
         display: inline-block;
-        min-height: 83.125rem;
+       /* min-height: 83.125rem;*/
+    }
+
+    .messaggi {
+        width: 90%;
     }
     
     .excp {
+        display: inline-block;
         width: 50%;
     }
     
+}
+
+@media screen and (min-width: 992px) {
+    
+   body {
+    background: linear-gradient(  #009688 0%,  #009688 40%, #d7dbd5 40% );
+    background-repeat: no-repeat;
+   }
+
+   .container {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+   }
+
+   .contatti {
+    width: 30%;
+   }
+
+   .messaggi {
+    width: 70%;
+   }
+   
 }
 
