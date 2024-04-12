@@ -18,24 +18,23 @@ body {
 
 .container {
     max-width: 100%;
-    margin: 0 auto;
+    
  }
  
  .row {
      display: flex;
-     flex-wrap: wrap;
  }
 
  .messaggi {
-    width: 100%;
-   /*  height: 300px;*/
+    flex-grow: 1;
+    background-color: aqua;
      border: 1px solid black;
      
  }
 
  .contatti {
     display: none;
-    width: 10%;
+    flex-shrink: 0;
     border: 1px solid black;
     background-color: red;
  }
@@ -106,17 +105,18 @@ img {
 }
 
 /*  MEDIA QUARY */
-
+/*tablet*/
 @media screen and (min-width: 768px) {
+
+    .container {
+        display: flex;
+    }
         
     .contatti {
-        display: inline-block;
-       /* min-height: 83.125rem;*/
+        display: block;
     }
 
-    .messaggi {
-        width: 90%;
-    }
+   
     
     .excp {
         display: inline-block;
@@ -139,12 +139,10 @@ img {
    }
 
    .contatti {
-    width: 30%;
+    width: 350px;
    }
 
-   .messaggi {
-    width: 70%;
-   }
+  
    
 }
 
