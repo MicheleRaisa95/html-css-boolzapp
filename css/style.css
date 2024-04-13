@@ -149,6 +149,19 @@ header i {
  border-radius: 50%;
 }
 
+.relative {
+    position: relative;
+    top: 25px;
+    left: 10px;
+    color: #b6b9bb;
+}
+
+input[type=text] {
+    background-color: white;
+    padding-left: 40px;
+    width: 100%;
+    height: 30px;
+  }
 /*conversation*/
 
 .sent {
@@ -186,6 +199,7 @@ header i {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        position: relative;
     }
 
     .notification {
@@ -241,6 +255,7 @@ header i {
      .search {
         display: block;
          background-color: var(--search-bg);
+         padding: 0 30px 20px;
      }
 
      .icone {
@@ -281,3 +296,11 @@ header i {
     max-width: 50%;
     background-color: var(--mex-sent);
 }
+
+
+
+input[type=text] {
+    background-color: white;
+    padding-left: 40px;
+    width: 100%;
+  }
