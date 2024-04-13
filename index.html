@@ -29,8 +29,39 @@
                     </span>
             </div>
         </header>
-        <div class="notification">notification</div>
-        <div class="search">search</div>
+        <div class="notification">
+           <div class="flex">
+            <div class="flex align-items-center margin-y10">
+                <div>
+                    <span class="slash-bell padding-x10">
+                        <i class="fa-regular fa-bell-slash"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="flex-column">
+                <div>
+                    Ricevi notifiche di nuovi messaggi
+                </div>
+                <div>
+                    <a id="notifiche-desktop" href="#">
+                        attiva notifiche desktop
+                    </a>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="search">
+            <div class="flex-wrap new-chat">
+                <div class="bg-white">
+                    <span class="flex">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="flex">
+                            <input type="text" id="conversazione" placeholder=" cerca o inizia una nuova chat">
+                        </div> 
+                    </span>
+                </div>
+            </div>
+        </div>
         <ul class="chats">
             <li>
                 avatar
@@ -138,7 +169,7 @@
 
     </div>
     <div class="content">
-        <header>
+        <header class="border-left">
             <div class="profilo">
                <div class="flex align-items-center">
                 <figure>

@@ -63,6 +63,17 @@ footer.message {
     display: flex;
 }
 
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -91,6 +102,22 @@ header i {
 
 .profile-name {
     padding-left: 10px;
+}
+
+.margin-y10 {
+    margin: 10px 0px;
+}
+
+.padding-x10 {
+    padding: 0 10px;
+}
+
+.border-left {
+    border-left: 1px solid #d6d6d6;
+}
+
+.bg-white {
+    background-color: var(--chat-bg);
 }
 /*CONTENT*/
 
@@ -180,6 +207,24 @@ header i {
         display: block;
         color: var(--icone-header);
      }
+     .slash-bell i {
+        background-color: #ffffff;
+        color: var(--notification-bg);
+        border-radius: 50%;
+        padding: 15px;
+        
+     }
 
+     #notifiche-desktop {
+        color: #5a7d88;
+     }
      
+     #conversazione {
+        flex: 1 1 auto;
+        width: 100%;
+     }
+
+     .new-chat {
+        background-color: var(--color-gray);
+     }
 }
