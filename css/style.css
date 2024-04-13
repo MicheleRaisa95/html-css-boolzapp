@@ -74,6 +74,14 @@ footer.message {
     justify-content: center;
 }
 
+.flex-end {
+    align-items: flex-end;
+}
+
+.flex-start {
+    align-items: flex-start;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -94,6 +102,7 @@ footer.message {
     --chat-bg: #ffffff;
     --message-bg: #f3eeeb;
     --icone-header: #b1b1b1;
+    --mex-sent: #d4f9bb;
 }
 
 header i {
@@ -112,6 +121,15 @@ header i {
     padding: 0 10px;
 }
 
+.px-right {
+    padding-right: 70px;
+    margin: 70px 0;
+}
+
+.px-left {
+    padding-left: 70px;
+}
+
 .border-left {
     border-left: 1px solid #d6d6d6;
 }
@@ -119,6 +137,8 @@ header i {
 .bg-white {
     background-color: var(--chat-bg);
 }
+
+
 /*CONTENT*/
 
 /*sidebar,header*/
@@ -127,6 +147,22 @@ header i {
  width: 50px;  
  height: 50px; 
  border-radius: 50%;
+}
+
+/*conversation*/
+
+.sent {
+    max-width: 50%;
+    background-color: var(--mex-sent);
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.ricevuti {
+    max-width: 50%;
+    background-color: var(--chat-bg);
+    border-radius: 5%;
+    padding: 10px;
 }
 
 
@@ -172,6 +208,10 @@ header i {
      .icone-content {
         display: block;
         color: var(--icone-header);
+     }
+
+     .profilo-none {
+        display: none;
      }
 
 }
@@ -227,4 +267,17 @@ header i {
      .new-chat {
         background-color: var(--color-gray);
      }
+
+     .profilo-none {
+        display: block;
+     }
+}
+
+
+
+
+
+.sent {
+    max-width: 50%;
+    background-color: var(--mex-sent);
 }
