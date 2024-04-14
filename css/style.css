@@ -102,6 +102,10 @@ footer.message input {
     justify-content: center;
 }
 
+.justify-content {
+    justify-content: space-between;
+}
+
 .flex-end {
     align-items: flex-end;
 }
@@ -198,6 +202,7 @@ header i {
     background-color: var(--mex-sent);
     border-radius: 5%;
     padding: 10px;
+    position: relative;
 }
 
 .ricevuti {
@@ -206,6 +211,34 @@ header i {
     border-radius: 5%;
     padding: 10px;
 }
+
+.sent p {
+    position: relative;
+    padding-right: 10px;
+}
+
+
+.sent p span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.5;
+    text-align: right;
+}
+
+.sent i {
+   text-align: absolute;
+}
+
+
+
+.ricevuti p span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+    opacity: 0.5;
+}
+
 
 
 
@@ -310,6 +343,20 @@ header i {
 
      .profilo-none {
         display: block;
+     }
+
+     .profilo {
+        border-bottom: 1px solid  #d6d6d6;
+     }
+
+     .profile-name p {
+        font-size: 10px;
+        color: var(--icone-header);
+     }
+
+     .watch {
+         color: var(--icone-header);
+         font-size: 12px;
      }
 }
 
